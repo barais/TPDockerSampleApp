@@ -23,7 +23,7 @@ import org.opencv.objdetect.CascadeClassifier;
 public class Main {
 
     private static final String TROLL_IMAGE = "trollface.jpg";
-    private static final String OPENCV_HAARCASCADES_HOME = "//opencv-java-bin/";
+    private static final String OPENCV_HAARCASCADES_HOME = "/opencv-java-bin/";
 
 
     
