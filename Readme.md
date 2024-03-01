@@ -90,6 +90,13 @@ Lancement de nginx en resolvproxy
 docker run -d -p 8080:80 -v /var/run/docker.sock:/tmp/docker.sock -t jwilder/nginx-proxy 
 ```
 
+⚠️ Pour certaines installations comme sur la dernière édition de Fedora, les règles de sécurité par défaut ont évolué. Pour que le container puisse accéder, à la socket docker il faut ajouter l'option suivante: 
+
+```bash
+docker run --security-opt=label:type:docker_t  -d -p 8080:80 -v /var/run/docker.sock:/tmp/docker.sock -t jwilder/nginx-proxy 
+```
+
+
 
 Dans le suite nous allons utiliser terminator pour visualiser les effets du load-balancing (uniquement pour ceux qui sont sur leur propre portable). 
 
